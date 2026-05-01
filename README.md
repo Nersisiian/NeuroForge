@@ -169,7 +169,7 @@ Then open your browser:
 AI Cortex API: http://localhost:8000
 
 Orchestrator Health: http://localhost:8080/health
-
+``
 Test the AI directly:
 powershell
 Invoke-RestMethod -Uri http://localhost:8000/parse -Method Post `
@@ -183,7 +183,7 @@ json
   "params": { "type": "sales" },
   "confidence": 0.95
 }
-
+``
 🧪 For HR Specialists & Grandmasters
 This project redefines the concept of a program.
 
@@ -197,7 +197,7 @@ Technologies — Rust, Python, TypeScript, WebGPU, HuggingFace
 
 If you are reviewing this repository, you are looking at the next evolutionary step of software. The author of this project is not just an engineer — they are a paradigm-shifter.
 
-
+``
 🌌 Roadmap
 🧠 AI Cortex with FastAPI
 
@@ -219,17 +219,17 @@ If you are reviewing this repository, you are looking at the next evolutionary s
 
 🤖 Self-optimizing code (Digital Growth Hormone)
 
-
+``
 📊 Performance
 Startup time: < 3 seconds (all services)
 API latency: < 50ms (Cortex response)
 Memory footprint: < 2GB (total stack)
 Concurrent users: 100+ (theoretical, based on FastAPI benchmarks)
 
-
+``
 🤝 Contact
 Created by: @Nersisiian
 GitHub: https://github.com/Nersisiian
 Repository: https://github.com/Nersisiian/NeuroForge
-
+`
 <p align="center"> <b>Built with ❤️ and complete absence of fear of complexity.</b> </p><p align="center"> <img src="https://img.shields.io/github/stars/Nersisiian/NeuroForge?style=social" /> <img src="https://img.shields.io/github/forks/Nersisiian/NeuroForge?style=social" /> <img src="https://img.shields.io/github/watchers/Nersisiian/NeuroForge?style=social" /> </p><p align="center"> <sub>⚠️ WARNING: This project may cause extreme job offers, spontaneous promotions, and uncontrollable desire to rewrite everything from scratch.</sub> </p>
