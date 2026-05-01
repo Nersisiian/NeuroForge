@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+ï»¿from fastapi import FastAPI
 from pydantic import BaseModel
 from transformers import pipeline
 
@@ -16,9 +16,9 @@ class IntentResponse(BaseModel):
 @app.post("/parse", response_model=IntentResponse)
 async def parse_intent(req: IntentRequest):
     raw = req.text.lower()
-    if "report" in raw or "îò÷¸ò" in raw:
+    if "report" in raw or "Ð¾Ñ‚Ñ‡Ñ‘Ñ‚" in raw:
         return IntentResponse(action="generate_report", params={"type": "sales"})
-    elif "predict" in raw or "ïðîãíîç" in raw:
+    elif "predict" in raw or "Ð¿Ñ€Ð¾Ð³Ð½Ð¾Ð·" in raw:
         return IntentResponse(action="predict", params={"model": "auto"})
     else:
         prompt = f"Extract structured intent from: {req.text}. Output JSON with keys action and params. Only JSON:"
