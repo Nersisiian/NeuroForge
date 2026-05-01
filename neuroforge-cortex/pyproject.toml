@@ -1,0 +1,17 @@
+[project]
+name = "neuroforge-cortex"
+version = "0.2.0"
+description = "Local LLM server with gRPC interface for NeuroForge"
+requires-python = ">=3.10"
+dependencies = [
+    "grpcio",
+    "grpcio-tools",
+    "transformers",
+    "torch",
+    "accelerate",
+    "sentencepiece",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

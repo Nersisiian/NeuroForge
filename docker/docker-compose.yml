@@ -1,0 +1,38 @@
+services:
+  cortex:
+    build:
+      context: ../neuroforge-cortex
+      dockerfile: ../docker/cortex.Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../neuroforge-cortex/models:/app/models
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  genesis-ui:
+    build:
+      context: ../neuroforge-genesis-ui
+      dockerfile: ../docker/genesis-ui.Dockerfile
+    ports:
+      - "5173:5173"          # <-- ??????????
+    depends_on:
+      - cortex
+
+  orchestrator:
+    build:
+      context: ../neuroforge-orchestrator
+      dockerfile: ../docker/orchestrator.Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - cortex
+    environment:
+      - CORTEX_ADDR=http://cortex:8000

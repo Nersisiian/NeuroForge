@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+package cortex;
+
+service Cortex {
+  rpc ParseIntent (IntentRequest) returns (IntentResponse);
+  rpc GenerateUI (UIRequest) returns (UIResponse);
+}
+
+message IntentRequest {
+  string text = 1;
+  map<string, string> context = 2;
+}
+
+message IntentResponse {
+  string action = 1;
+  string params_json = 2;
+  float confidence = 3;
+}
+
+message UIRequest {
+  string intent_id = 1;
+  map<string, string> constraints = 2;
+}
+
+message UIResponse {
+  string component_tree_json = 1;  // JSON-дерево React компонентов
+  repeated string assets = 2;
+}

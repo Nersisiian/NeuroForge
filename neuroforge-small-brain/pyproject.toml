@@ -1,0 +1,16 @@
+[project]
+name = "neuroforge-small-brain"
+version = "0.1.0"
+description = "Local AI intent parser and micro-orchestrator"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "transformers",
+    "torch",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

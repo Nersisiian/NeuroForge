@@ -1,0 +1,16 @@
+[package]
+name = "neuroforge-orchestrator"
+version = "0.2.0"
+edition = "2021"
+description = "Orchestrates microservice pipelines using gRPC"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tonic = "0.10"
+axum = "0.7"
+prost = "0.12"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[build-dependencies]
+tonic-build = "0.10"
